@@ -56,7 +56,7 @@ To use this action in your workflow, add the following step:
 <!-- x-release-please-start-version -->
 ```yaml
 - name: Patch Container Image with Falcon Sensor
-  uses: crowdstrike/falconutil-action@v1.0.1
+  uses: crowdstrike/falconutil-action@v1.1.0
   with:
     falcon_client_id: 'abcdefghijk123456789'
     falcon_region: 'us-2'
@@ -99,7 +99,7 @@ To use this action in your workflow, add the following step:
 <!-- x-release-please-start-version -->
 ```yaml
 - name: Patch Container Image
-  uses: crowdstrike/falconutil-action@v1.0.1
+  uses: crowdstrike/falconutil-action@v1.1.0
   with:
     falcon_client_id: ${{ vars.FALCON_CLIENT_ID }}
     falcon_region: 'eu-1'
@@ -114,7 +114,7 @@ To use this action in your workflow, add the following step:
 <!-- x-release-please-start-version -->
 ```yaml
 - name: Patch Container Image for ACI
-  uses: crowdstrike/falconutil-action@v1.0.1
+  uses: crowdstrike/falconutil-action@v1.1.0
   with:
     falcon_client_id: ${{ vars.FALCON_CLIENT_ID }}
     falcon_region: 'us-1'
@@ -133,7 +133,7 @@ To use this action in your workflow, add the following step:
 <!-- x-release-please-start-version -->
 ```yaml
 - name: Patch Container Image for ECS Fargate
-  uses: crowdstrike/falconutil-action@v1.0.1
+  uses: crowdstrike/falconutil-action@v1.1.0
   with:
     falcon_client_id: ${{ vars.FALCON_CLIENT_ID }}
     falcon_region: 'us-2'
