@@ -1,5 +1,18 @@
 # Changelog
 
+## [1.1.0](https://github.com/CrowdStrike/falconutil-action/compare/v1.0.1...v1.1.0) (2025-08-06)
+
+
+### Features
+
+* add option to specify image architecture when using the image pulled by the action ([13cacd8](https://github.com/CrowdStrike/falconutil-action/commit/13cacd858a398504628ffe8667689d6a96026933))
+
+
+### Miscellaneous
+
+* minor cleanup ([5079d37](https://github.com/CrowdStrike/falconutil-action/commit/5079d378208baaa9cd10b9726e022c10ae22a6f1))
+* removed unnecessary quotes ([fc2c080](https://github.com/CrowdStrike/falconutil-action/commit/fc2c08077e3ff82b39c1037255120c6f75df0e15))
+
 ## [1.0.1](https://github.com/CrowdStrike/falconutil-action/compare/v1.0.0...v1.0.1) (2025-05-23)
 
 
