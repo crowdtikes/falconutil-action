@@ -50,17 +50,7 @@ jobs:
       - name: Pull test image
         run: docker pull ${{ inputs.source_image_uri }}
 
-      - name: Test Falcon Container Image Patching
-        uses: ./
-        with:
-          falcon_client_id: ${{ inputs.falcon_client_id }}
-          falcon_region: ${{ inputs.falcon_region }}
-          cid: ${{ inputs.cid }}
-          source_image_uri: ${{ inputs.source_image_uri }}
-          target_image_uri: ${{ inputs.target_image_uri }}
-          falconctl_opts: ${{ inputs.falconctl_opts }}
-        env:
-          FALCON_CLIENT_SECRET: ${{ secrets.FALCON_CLIENT_SECRET }}
+
 
       - name: Verify patched image exists
         run: |
@@ -73,6 +63,18 @@ jobs:
             echo "❌ Failed to create patched image"
             exit 1
           fi
+          
+      - name: Test Falcon Container Image Patching
+        uses: ./
+        with:
+          falcon_client_id: ${{ inputs.falcon_client_id }}
+          falcon_region: ${{ inputs.falcon_region }}
+          cid: ${{ inputs.cid }}
+          source_image_uri: ${{ inputs.source_image_uri }}
+          target_image_uri: ${{ inputs.target_image_uri }}
+          falconctl_opts: ${{ inputs.falconctl_opts }}
+        env:
+          FALCON_CLIENT_SECRET: ${{ secrets.FALCON_CLIENT_SECRET }}
 
       - name: Cleanup local registry
         if: always()
